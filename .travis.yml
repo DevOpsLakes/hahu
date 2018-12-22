@@ -24,7 +24,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key: $github_oauth_token
-  file: /home/travis/.m2/repository/com/fc/hahu/1.0-SNAPSHOT/hahu-1.0-SNAPSHOT.war
+  file: /home/travis/.m2/repository/com/fc/hahu/1.0/hahu-1.0.war
   skip_cleanup: true
   on:
     branch: learn_github_releases
