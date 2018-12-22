@@ -2,6 +2,7 @@
 branches:
   only:
   - learn_github_releases
+  - watch_pull_request_with_travis
 
 language: java
 jdk:
