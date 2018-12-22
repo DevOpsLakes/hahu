@@ -1,0 +1,31 @@
+#test ci
+branches:
+  only:
+  - learn_github_releases
+
+language: java
+jdk:
+  - oraclejdk8
+
+env:
+  CATALINA_BASE=/home/travis
+
+sudo: false
+install: true
+
+script:
+  - mvn install
+
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "unaheidi"
+  - git config --local user.email "unaheidi@gmail.com"
+  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
+deploy:
+  provider: releases
+  api_key: $github_oauth_token
+  file: /home/travis/.m2/repository/com/fc/hahu/1.2-SNAPSHOT/hahu-1.2-SNAPSHOT.war
+  skip_cleanup: true
+  on:
+    branch: learn_github_releases
+
