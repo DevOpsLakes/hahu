@@ -4,7 +4,7 @@
     <groupId>com.fc</groupId>
     <artifactId>hahu</artifactId>
     <packaging>war</packaging>
-    <version>1.1</version>
+    <version>1.2</version>
     <name>hahu Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <properties>
@@ -242,6 +242,19 @@
                 <configuration>
                     <forkMode>once</forkMode>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>cobertura-maven-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <formats>
+                        <format>html</format>
+                        <format>xml</format>
+                    </formats>
+                    <check />
                 </configuration>
             </plugin>
 
