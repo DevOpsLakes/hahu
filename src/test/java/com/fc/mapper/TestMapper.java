@@ -1,4 +1,4 @@
-
+/*
 package com.fc.mapper;
 
 import org.junit.Test;
@@ -15,4 +15,5 @@ public class TestMapper {
 		System.out.println("ok");
 	}
 }
+*/
 
