@@ -33,5 +33,4 @@ deploy:
   skip_cleanup: true
   on:
     branch: learn_github_releases
-    condition: $TRAVIS_PULL_REQUEST = false
 
